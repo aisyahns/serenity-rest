@@ -12,5 +12,5 @@ Feature: Get All Project
   Scenario: Get all project with valid token
     Given I set url and valid token to get all project
     When I request get all project
-    Then I will get 400
+    Then I will get 200
     And get list of all my projects
