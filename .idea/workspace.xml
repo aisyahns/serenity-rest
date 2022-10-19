@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f44a36-47ad-4715-80b2-4bbb719fe30d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Projects/GetAllProject.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Projects/GetAllProject.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
