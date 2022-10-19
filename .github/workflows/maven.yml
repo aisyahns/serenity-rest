@@ -1,26 +1,28 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: Java CI with Maven # nama dari workflow JAVA CI with Maven
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+on: # apa2 yang ngetrigger jalannya ci/cd
+  push: # ci/cd ini akan jalan ketika ada push
+    branches: [ "master" ] # kita ngedefine ini tuh push di branch mana sih? di branch main/master/develop/staging/dll
+  pull_request: # ci cd akan jalan ketika ada pull_request
+    branches: [ "master" ] #
 
-jobs:
-  build:
+jobs: # apa2 yang akan dijalankan pada ci/cd
+  build: # nama jobs yg pertama adalah build
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # server atau device online itu akan jalan di os ubuntu
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 11
+    steps: # detail dari apa yang dilakukan di jobs build
+    - uses: actions/checkout@v3 # ngambil file2 automationnya (ini udah pasti ada, dan syntaxnya kaya gini)
+    - name: Set up JDK 11 # setup java versi 11
       uses: actions/setup-java@v3
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Build with Maven # build with maven
       run: mvn -B package --file pom.xml
+    - name: Run automation api
+      run: mvn clean verify
