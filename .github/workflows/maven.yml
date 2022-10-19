@@ -5,7 +5,9 @@ name: Java CI with Maven # nama dari workflow JAVA CI with Maven
 
 on: # apa2 yang ngetrigger jalannya ci/cd
   push: # ci/cd ini akan jalan ketika ada push
-    branches: [ "main" ] # kita ngedefine ini tuh push di branch mana sih? di branch main/master/develop/staging/dll
+    branches: [ "master", "develop" ]
+
+    # kita ngedefine ini tuh push di branch mana sih? di branch main/master/develop/staging/dll
   pull_request: # ci cd akan jalan ketika ada pull_request
     branches: [ "master" ] #
 
