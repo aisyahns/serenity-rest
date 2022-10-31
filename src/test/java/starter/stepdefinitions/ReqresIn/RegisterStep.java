@@ -17,11 +17,21 @@ public class RegisterStep {
 
     @And("I set body valid email and valid password")
     public void iSetBodyValidEmailAndValidPassword() {
-        register.setBodyValidEmailValidPassword();
+//        register.setBodyValidEmailValidPassword();
+        register.setBodyInvalidEmailValidPassword();
+//        register.bodyProduct();
     }
 
     @When("I request register")
     public void iRequestRegister() {
         register.requestRegister();
+    }
+
+    @And("I set body {string} email and {string}")
+    public void iSetBodyEmailAnd(String arg0, String arg1) {
+        // aku butuh method yang akan menerima value email dan value password
+        // dari .feature
+        // email + password akan ngebentuk body data yang mau dikirim
+        register.setBodyData(arg0, arg1);
     }
 }
